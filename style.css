@@ -10,7 +10,7 @@ body {
   --font-size-base: 13px;
 }
 
-.header { 
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,8 +64,21 @@ body {
   transition: color var(--anim-duration) ease;
 }
 
-.nav_link:hover {
-  color: var(--color-blue);
+.nav_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  height: 2px;
+  background: var(--color-blue);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--anim-duration) ease;
+}
+
+.nav_link:hover::after {
+  transform: scaleX(1);
 }
 
 main {
@@ -107,7 +120,8 @@ aside {
   color: #000;
   font-size: var(--font-size-base);
   border-radius: 4px;
-  transition: color var(--anim-duration) ease, background-color var(--anim-duration) ease;
+  transition: color var(--anim-duration) ease,
+    background-color var(--anim-duration) ease;
 }
 
 .sidebar_link:hover {
