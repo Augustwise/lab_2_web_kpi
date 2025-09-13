@@ -1,6 +1,9 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
@@ -84,6 +87,7 @@ body {
 main {
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 .header {
@@ -151,12 +155,11 @@ aside {
   transform: scale(1.04);
 }
 
-footer {
+.footer {
   width: 100%;
   box-sizing: border-box;
   background-color: var(--color-footer);
   padding: 40px 50px;
-  height: 100%;
 }
 
 .footer_nav {
